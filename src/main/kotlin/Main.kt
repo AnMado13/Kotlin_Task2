@@ -22,6 +22,7 @@ fun main(args: Array<String>){
         }
     }
 
+    arrayModified.forEach { println(it) }
 
 
 }
