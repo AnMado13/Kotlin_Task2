@@ -1,18 +1,15 @@
-import java.io.FileReader
 import kotlin.math.sign
 
-fun main(args: Array<String>){
-    val fileReader = FileReader("./input/Input.doc")
-    val array = fileReader.readLines()
+fun main(array: Array<Double>){
+
     val arraySize = array.size
 
-    var arrayModified = DoubleArray(arraySize)
+    val arrayModified = DoubleArray(arraySize)
 
     var indexBegin = 0
     var indexEnd = arraySize - 1
 
-    for (line in array){
-        var number = line.toDouble()
+    for (number in array){
         if (number.sign < 0.0) {
             arrayModified[indexBegin] = number
             indexBegin += 1
@@ -22,7 +19,7 @@ fun main(args: Array<String>){
         }
     }
 
-    arrayModified.forEach { println(it) }
+    arrayModified.forEach { print("$it ") }
 
 
 }
