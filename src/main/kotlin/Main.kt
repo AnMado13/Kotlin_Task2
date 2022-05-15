@@ -1,7 +1,8 @@
 import kotlin.math.sign
 
-fun main(array: Array<Double>){
+fun main(arg: String){
 
+    val array = arg.trim().split(" ")
     val arraySize = array.size
 
     val arrayModified = DoubleArray(arraySize)
@@ -9,7 +10,8 @@ fun main(array: Array<Double>){
     var indexBegin = 0
     var indexEnd = arraySize - 1
 
-    for (number in array){
+    for (element in array){
+        val number = element.toDouble()
         if (number.sign < 0.0) {
             arrayModified[indexBegin] = number
             indexBegin += 1

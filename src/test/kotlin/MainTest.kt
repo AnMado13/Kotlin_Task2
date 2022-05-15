@@ -10,19 +10,19 @@ import kotlin.math.sign
 
 
 @RunWith(Parameterized::class)
-class MainTest(private val array: Array<Double>) {
+class MainTest(private val array: String) {
     companion object {
         @JvmStatic
         @Parameterized.Parameters
-        fun monthNumbers(): Collection<Array<Array<Double>>> {
+        fun monthNumbers(): Collection<Array<String>> {
             return listOf(
-                arrayOf(arrayOf(1.0, 2.0, 3.0)),
-                arrayOf(arrayOf(-1.3, -1.5, -2.0)),
-                arrayOf(arrayOf(-2.0, -3.0, 4.0, 5.6)),
-                arrayOf(arrayOf(-0.5, 5.6, -0.7)),
-                arrayOf(arrayOf(4.0, -1.0, 3.0, -7.7)),
-                arrayOf(arrayOf(0.0, -0.7)),
-                arrayOf(arrayOf(3.0, -1.0, 0.0, -2.0))
+                arrayOf("1.0 2.0 3.0 0.0"),
+                arrayOf("-1.3 -1.5 -2.0"),
+                arrayOf("-2.0 -3.0 4.0 5.6"),
+                arrayOf("-0.5 5.6 -0.7"),
+                arrayOf("4.0 -1.0 3.0 -7.7"),
+                arrayOf("0.0 -0.7"),
+                arrayOf("3.0 -1.0 0.0 -2.0")
             )
         }
 
