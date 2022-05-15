@@ -68,6 +68,6 @@ class MainTest(private val array: String) {
             index++
         }
 
-        assertEquals("Wrong structure: fail at index ${index - 1}", size, index)
+        assertEquals("Wrong structure: fail at index $index", size, index)
     }
 }
